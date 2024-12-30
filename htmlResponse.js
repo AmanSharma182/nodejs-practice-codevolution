@@ -7,10 +7,11 @@ const server = http.createServer((req, res) => {
     "Content-Type": "text/html"
   })
 
-  fs.createReadStream("./index.html").pipe(res)
+  const name = "Aman";
 
-  // const html = fs.readFileSync("./index.html", "utf-8")
-  // res.end(html);
+  let html = fs.readFileSync("./index.html", "utf-8")
+  html = html.replace("{{name}}", name)
+  res.end(html);
 })
 
 server.listen(3000, () => {
