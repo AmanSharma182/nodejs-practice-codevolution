@@ -16,6 +16,12 @@ setTimeout(() =>
   console.log("Callback from the setTimeout")
 , 0)
 
+
+setImmediate(() => 
+  console.log("Callback from the setImmediate")
+);
+
+
 // setTimeout(() => 
 //   console.log("Callback from the setTimeout")
 // , 0)
