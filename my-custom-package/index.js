@@ -1,5 +1,10 @@
+import { upperCase } from "upper-case";
+
 function greet(name) {
-  console.log(`Hello ${name}, Aman Sharma this side`);
+  console.log(upperCase(`Hello ${name}, Aman Sharma this side`));
 }
 
-module.exports = greet;
+
+greet("Aman Sharma")
+
+export default greet;
