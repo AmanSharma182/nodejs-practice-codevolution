@@ -1,16 +1,14 @@
 const http = require("node:http")
 
 const server = http.createServer((req, res) => {
-  const superHero = {
-    firstName: "Bruce",
-    lastName: "Wayne"
-  }
   res.writeHead(200, {
-    "Content-Type": "application/json"
+    "Content-Type": "text/plain"
   })
-  res.end(JSON.stringify(superHero));
+  res.end("Hello world!");
 })
 
-server.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
+
+server.listen(PORT, () => {
   console.log("Serving runing on port 3000");
 });
